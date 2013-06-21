@@ -1,0 +1,29 @@
+/* by: zhujinliang */
+
+article {
+	font-size: 20px; word-wrap: break-word;
+	font-family: Verdana, '微软雅黑', Arial;
+}
+article h1:first-child {
+	display: block; font-size: 32px; text-align: center;
+	padding: 8px; margin: 32px 18px 12px; border-bottom: 1px #eee solid;
+}
+article em {
+	font-size: 16px; color: #666;
+}
+article ul {
+	margin-right: 16px;
+}
+
+.single h1 {
+	font-size: 50px !important; line-height: 60px;
+	padding:0 !important; margin:175px 0 0 !important; border: none !important;
+}
+.single h1:only-child {
+	line-height: 480px !important;
+	 margin:0 !important;
+}
+.single h2 {
+	font-size: 28px; color: #666; text-align: right; margin:18px 60px !important
+}
+
