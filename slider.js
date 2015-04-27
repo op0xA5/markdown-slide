@@ -32,6 +32,27 @@ var Slider = function(_target, _config){
 	};
 	section.addEventListener('click', _mouseEvent);
 	section.addEventListener('contextmenu', _mouseEvent);
+	
+	var _keyEvent = function(evt){
+		var keynum = -1;
+		if(window.event) // IE
+		{
+			keynum = evt.keyCode
+		}
+		else if(evt.which) // Netscape/Firefox/Opera
+		{
+			keynum = evt.which
+		}
+		if(keynum == 39) {  //39是->键的指
+			_this.next();
+		}
+		if(keynum == 37) {  //37是<-键的指
+			_this.prev();
+		}
+		evt.preventDefault();
+		return false;
+	}
+        document.body.addEventListener("keyup", _keyEvent);
 
 	if(_this.config.fullScreen){
 		sectionStyle.position = 'fixed';
